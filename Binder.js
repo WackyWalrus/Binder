@@ -13,4 +13,13 @@ var Binder = function(){
 			return element.removeEventListener(action,f,false);
 		}
 	}
+	this.onChange = function(element,f){
+		var val = element.value;
+		setInterval(function(){
+			if(element.value != val){
+				f();
+			}
+			val = element.value;
+		},200);
+	}
 }
