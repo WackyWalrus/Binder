@@ -26,4 +26,9 @@ var Binder = function(){
 	this.clearChange = function(id){
 		clearInterval(this.interval[id]);
 	}
+	this.do = function(element,action,f){
+		if(element[action]() == undefined){
+			f();
+		}
+	}
 }
