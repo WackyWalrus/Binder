@@ -1,4 +1,5 @@
 var Binder = function(){
+	this.interval = new Array();
 	this.addEvent = function(element,action,f){
 		if(element.attachEvent){
 			return element.attachEvent('on'+action,f);
@@ -13,13 +14,16 @@ var Binder = function(){
 			return element.removeEventListener(action,f,false);
 		}
 	}
-	this.onChange = function(element,f){
+	this.onChange = function(element,id,f){
 		var val = element.value;
-		setInterval(function(){
+		this.interval[id] = setInterval(function(){
 			if(element.value != val){
 				f();
 			}
 			val = element.value;
 		},200);
+	}
+	this.clearChange = function(id){
+		clearInterval(this.interval[id]);
 	}
 }
