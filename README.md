@@ -9,9 +9,22 @@ For example:
 
     var anchor = document.getElementById('bindy');
     var b = new Binder();
-    b.addEvent(anchor,'click',function(){
+    b.event.add(anchor,'click',function(){
         anchor.innerHTML = 'Clicked!';
     });
+
+Removing an event is quick too
+
+    var input = document.getElementById('my-text-input');
+    var b = new Binder();
+
+    // add the bind
+    b.event.add(input,'focus',callback);
+
+    // removes the bind, this will only be called once!
+    function callback(){
+    	b.event.remove(input,'focus',callback);
+    }
 
 This is still very much in development. It will be a lot more useful in the future, I promise.
 * * *
