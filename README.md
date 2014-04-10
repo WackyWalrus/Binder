@@ -43,4 +43,4 @@ For example:
 
 You can remove the onChange bind with:
 
-    b.clearChange(elem,'this-binds-unique-id',callback);
+    b.clearChange('this-binds-unique-id');
