@@ -1,6 +1,6 @@
 Binder.js
 ======
-A quick way to add binds to elements.
+A quick way to add binds to elements. [Click here](https://raw.githubusercontent.com/WackyWalrus/Binder.js/master/Binder.js) and hit ctrl+s to download!
 ------------------------------------
 * * *
 
