@@ -30,17 +30,17 @@ This is still very much in development. It will be a lot more useful in the futu
 * * *
 Better onchange
 --------------
-The onChange in Binder.js doesn't require you to focus away from the input! This function will run the callback with every keystroke.
+The onchange in Binder.js doesn't require you to focus away from the input! This function will run the callback with every keystroke.
 
 For example:
 
 	var elem = document.getElementById('elem'); // this is the element we're binding
-    // this is the callback for our onChange
+    // this is the callback for our onchange
     function callback(){
         console.log('Function ran!');
     }
-	b.onChange(elem,'this-binds-unique-id',callback); // this line adds the onChange bind
+	b.onchange.add(elem,'this-binds-unique-id',callback); // this line adds the onchange bind
 
-You can remove the onChange bind with:
+You can remove the onchange bind with:
 
-    b.clearChange('this-binds-unique-id');
+    b.onchange.remove('this-binds-unique-id');
