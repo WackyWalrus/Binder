@@ -24,7 +24,7 @@ var Binder = function(){
 					f();
 				}
 				val = element.value;
-			},200);
+			},35);
 		},
 		remove: function(id){
 			clearInterval(this.interval[id]);
