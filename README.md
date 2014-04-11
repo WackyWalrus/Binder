@@ -1,4 +1,4 @@
-Binder.js
+Binder.js [Binder Icon](http://wackywalrus.github.io/img/folder.png)
 ======
 A quick way to add binds to elements. 
 ------------------------------------
